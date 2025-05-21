@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://blog.belkacim.com/</loc>
+    <lastmod>2025-05-20T22:35:05+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.belkacim.com/posts/</loc>
+    <lastmod>2018-04-16T13:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.belkacim.com/categories/</loc>
+  </url><url>
+    <loc>https://blog.belkacim.com/tags/</loc>
+  </url>
+</urlset>

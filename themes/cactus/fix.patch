@@ -1,0 +1,50 @@
+From eb4a01644555170808da009285cd805719d34f4c Mon Sep 17 00:00:00 2001
+From: voytex <vlukas@hotmail.cz>
+Date: Wed, 5 Mar 2025 18:17:57 +0100
+Subject: [PATCH 1/2] Edited layouts/partials/head.html to mitigate issue with
+ google analytics
+
+---
+ layouts/partials/head.html | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+diff --git a/layouts/partials/head.html b/layouts/partials/head.html
+index 59dca81b..c20ee9cc 100644
+--- a/layouts/partials/head.html
++++ b/layouts/partials/head.html
+@@ -42,11 +42,7 @@
+     {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
+   {{ end }}
+   {{ end }}
+-  {{ if .Site.GoogleAnalytics }}
+-  {{ if .Site.Params.googleAnalyticsAsync }}
+-    {{ template "_internal/google_analytics_async.html" . }}
+-  {{ else }}
++  {{ if .Site.Config.Services.GoogleAnalytics.ID }}
+     {{ template "_internal/google_analytics.html" . }}
+   {{ end }}
+-  {{ end }}
+ </head>
+
+From 94f84ceff0aa5b30fbc82a7ed5767aac7eb2c7d6 Mon Sep 17 00:00:00 2001
+From: voytex <vlukas@hotmail.cz>
+Date: Wed, 5 Mar 2025 18:21:09 +0100
+Subject: [PATCH 2/2] resources.ToCSS was deprecated, updated with css.Sass
+
+---
+ layouts/partials/head.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/layouts/partials/head.html b/layouts/partials/head.html
+index c20ee9cc..ad2443cc 100644
+--- a/layouts/partials/head.html
++++ b/layouts/partials/head.html
+@@ -24,7 +24,7 @@
+   {{ $colortheme := .Scratch.Get "colortheme" }}
+ 
+   {{- $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" "true") -}}
+-  {{- $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "scss/style.scss" . | resources.ToCSS $options | resources.Fingerprint "sha512" }}
++  {{- $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "scss/style.scss" . | css.Sass $options | resources.Fingerprint "sha512" }}
+   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"> 
+ 
+   <!-- Custom CSS -->
