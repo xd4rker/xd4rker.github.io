@@ -1,7 +1,7 @@
 +++
 date = '2018-04-16T13:53:00+00:00'
 title = 'Capture the Ether: Lotteries write-up'
-[[resources]]
+url = 'posts/capture-the-ether-lotteries-write-up'
 +++
 
 [![](images/image-1.png)](images/image-1.png)

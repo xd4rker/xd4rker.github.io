@@ -1,6 +1,5 @@
 +++
 date = '2025-05-20T12:58:04+02:00'
-draft = true
 title = 'About'
 +++
 

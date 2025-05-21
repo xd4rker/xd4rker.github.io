@@ -1,6 +1,7 @@
 +++
 date = '2017-07-20T11:16:00+00:00'
 title = 'Hijacking phpLDAPadmin account using a Cross-site scripting vulnerability (CVE-2017-11107)'
+url = 'posts/hijacking-phpldapadmin-xss'
 +++
 
 ## Software Description

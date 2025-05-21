@@ -1,6 +1,7 @@
 +++
 date = '2017-04-29T17:17:00+00:00'
 title = 'Pwning Windows 7 with ETERNALBLUE & DOUBLEPULSAR (Metasploit)'
+url = 'posts/pwning-win-7-eternalblue'
 +++
 
 {{< youtube -AMiSj6KwXo >}}

@@ -1,6 +1,7 @@
 +++
 date = '2014-09-28T03:39:00+00:00'
 title = 'SU-CTF 2014: Steganography 100 write-up'
+url = 'posts/su-ctf-2014-steganography-write-up'
 +++
 
 **Category:** Steganography\
