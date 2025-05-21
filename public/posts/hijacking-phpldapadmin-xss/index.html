@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -9,12 +9,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> Hijacking phpLDAPadmin account using a Cross-site scripting vulnerability (CVE-2017-11107) | Ismail Belkacim</title>
-  <link rel = 'canonical' href = 'http://localhost:1313/posts/hijacking-phpldapadmin-xss/'>
+  <link rel = 'canonical' href = 'https://blog.belkacim.com/posts/hijacking-phpldapadmin-xss/'>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:url" content="http://localhost:1313/posts/hijacking-phpldapadmin-xss/">
+  <meta property="og:url" content="https://blog.belkacim.com/posts/hijacking-phpldapadmin-xss/">
   <meta property="og:site_name" content="Ismail Belkacim">
   <meta property="og:title" content="Hijacking phpLDAPadmin account using a Cross-site scripting vulnerability (CVE-2017-11107)">
   <meta property="og:description" content="Software Description phpLDAPadmin is an web-based LDAP adminstration interface for viewing and manipulating LDAP information.
@@ -40,7 +40,7 @@ Proof of Concept (PoC) XSS via the form parameter:">
     
   
   
-  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+  <link rel="stylesheet" href="https://blog.belkacim.com/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
 
   
   
@@ -52,10 +52,8 @@ Proof of Concept (PoC) XSS via the form parameter:">
   
 
   
-<link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
+<link rel="icon" type="image/png" href="https://blog.belkacim.com/images/favicon.ico" />
 
-  
-  
   
   
     
@@ -102,14 +100,14 @@ Proof of Concept (PoC) XSS via the form parameter:">
       <ul>
         
         <li>
-          <a class="icon" href=" http://localhost:1313/posts/pwning-win-7-eternalblue/" aria-label="Previous">
+          <a class="icon" href=" https://blog.belkacim.com/posts/pwning-win-7-eternalblue/" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
         
         
         <li>
-          <a class="icon" href="http://localhost:1313/posts/capture-the-ether-lotteries-write-up/" aria-label="Next">
+          <a class="icon" href="https://blog.belkacim.com/posts/capture-the-ether-lotteries-write-up/" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
@@ -140,47 +138,47 @@ Proof of Concept (PoC) XSS via the form parameter:">
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Facebook">
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&text=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&text=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Twitter">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Linkedin">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&is_video=false&description=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&is_video=false&description=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pinterest">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&body=Check out this article: https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Email">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pocket">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="reddit">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&name=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&description=%3ch2%20id%3d%22software-description%22%3eSoftware%20Description%3c%2fh2%3e%0a%3cp%3ephpLDAPadmin%20is%20an%20web-based%20LDAP%20adminstration%20interface%20for%20viewing%20and%20manipulating%20LDAP%20information.%3c%2fp%3e%0a%3ch2%20id%3d%22vulnerability-description%22%3eVulnerability%20Description%3c%2fh2%3e%0a%3cp%3e%3ccode%3e%24request%5b%27form%27%5d%3c%2fcode%3e%20and%20%3ccode%3e%24request%5b%27rdn%27%5d%3c%2fcode%3e%20parameters%20in%20file%20%3ccode%3ehtdocs%2fentry_chooser.php%3c%2fcode%3e%20aren%26rsquo%3bt%20properly%20sanitized%20before%20being%20displayed%20to%20the%20user%2c%20which%20allows%20a%20remote%20attacker%20to%20inject%20arbitrary%20HTML%2fJavaScript%20code%20in%20a%20user%26rsquo%3bs%20context.%3c%2fp%3e%0a%3cscript%20src%3d%22https%3a%2f%2fgist.github.com%2fxd4rker%2f0bcac2062fe59df80b283790ad71b0c7.js%22%3e%3c%2fscript%3e%0a%3cp%3eThis%20vulnerability%2c%20if%20successfully%20exploited%2c%20can%20lead%20to%20data%20manipulation%20or%20information%20leakage%20as%20it%20is%20demonstrated%20in%20this%20PoC%20video%3a%3c%2fp%3e%0a%3cdiv%20style%3d%22position%3a%20relative%3b%20padding-bottom%3a%2056.25%25%3b%20height%3a%200%3b%20overflow%3a%20hidden%3b%22%3e%0a%20%20%20%20%20%20%3ciframe%20allow%3d%22accelerometer%3b%20autoplay%3b%20clipboard-write%3b%20encrypted-media%3b%20gyroscope%3b%20picture-in-picture%3b%20web-share%3b%20fullscreen%22%20loading%3d%22eager%22%20referrerpolicy%3d%22strict-origin-when-cross-origin%22%20src%3d%22https%3a%2f%2fwww.youtube.com%2fembed%2fWw7LD_bmH-o%3fautoplay%3d0%26amp%3bcontrols%3d1%26amp%3bend%3d0%26amp%3bloop%3d0%26amp%3bmute%3d0%26amp%3bstart%3d0%22%20style%3d%22position%3a%20absolute%3b%20top%3a%200%3b%20left%3a%200%3b%20width%3a%20100%25%3b%20height%3a%20100%25%3b%20border%3a0%3b%22%20title%3d%22YouTube%20video%22%3e%3c%2fiframe%3e%0a%20%20%20%20%3c%2fdiv%3e%0a%0a%3chr%3e%0a%3ch2%20id%3d%22proof-of-concept-poc%22%3eProof%20of%20Concept%20%28PoC%29%3c%2fh2%3e%0a%3cp%3e%3cstrong%3eXSS%20via%20the%20%3ccode%3eform%3c%2fcode%3e%20parameter%3a%3c%2fstrong%3e%3c%2fp%3e" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&name=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&description=%3ch2%20id%3d%22software-description%22%3eSoftware%20Description%3c%2fh2%3e%0a%3cp%3ephpLDAPadmin%20is%20an%20web-based%20LDAP%20adminstration%20interface%20for%20viewing%20and%20manipulating%20LDAP%20information.%3c%2fp%3e%0a%3ch2%20id%3d%22vulnerability-description%22%3eVulnerability%20Description%3c%2fh2%3e%0a%3cp%3e%3ccode%3e%24request%5b%27form%27%5d%3c%2fcode%3e%20and%20%3ccode%3e%24request%5b%27rdn%27%5d%3c%2fcode%3e%20parameters%20in%20file%20%3ccode%3ehtdocs%2fentry_chooser.php%3c%2fcode%3e%20aren%26rsquo%3bt%20properly%20sanitized%20before%20being%20displayed%20to%20the%20user%2c%20which%20allows%20a%20remote%20attacker%20to%20inject%20arbitrary%20HTML%2fJavaScript%20code%20in%20a%20user%26rsquo%3bs%20context.%3c%2fp%3e%0a%3cscript%20src%3d%22https%3a%2f%2fgist.github.com%2fxd4rker%2f0bcac2062fe59df80b283790ad71b0c7.js%22%3e%3c%2fscript%3e%0a%3cp%3eThis%20vulnerability%2c%20if%20successfully%20exploited%2c%20can%20lead%20to%20data%20manipulation%20or%20information%20leakage%20as%20it%20is%20demonstrated%20in%20this%20PoC%20video%3a%3c%2fp%3e%0a%3cdiv%20style%3d%22position%3a%20relative%3b%20padding-bottom%3a%2056.25%25%3b%20height%3a%200%3b%20overflow%3a%20hidden%3b%22%3e%0a%20%20%20%20%20%20%3ciframe%20allow%3d%22accelerometer%3b%20autoplay%3b%20clipboard-write%3b%20encrypted-media%3b%20gyroscope%3b%20picture-in-picture%3b%20web-share%3b%20fullscreen%22%20loading%3d%22eager%22%20referrerpolicy%3d%22strict-origin-when-cross-origin%22%20src%3d%22https%3a%2f%2fwww.youtube.com%2fembed%2fWw7LD_bmH-o%3fautoplay%3d0%26amp%3bcontrols%3d1%26amp%3bend%3d0%26amp%3bloop%3d0%26amp%3bmute%3d0%26amp%3bstart%3d0%22%20style%3d%22position%3a%20absolute%3b%20top%3a%200%3b%20left%3a%200%3b%20width%3a%20100%25%3b%20height%3a%20100%25%3b%20border%3a0%3b%22%20title%3d%22YouTube%20video%22%3e%3c%2fiframe%3e%0a%20%20%20%20%3c%2fdiv%3e%0a%0a%3chr%3e%0a%3ch2%20id%3d%22proof-of-concept-poc%22%3eProof%20of%20Concept%20%28PoC%29%3c%2fh2%3e%0a%3cp%3e%3cstrong%3eXSS%20via%20the%20%3ccode%3eform%3c%2fcode%3e%20parameter%3a%3c%2fstrong%3e%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&t=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&t=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Hacker News">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -301,47 +299,47 @@ Proof of Concept (PoC) XSS via the form parameter:">
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Facebook">
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&text=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&text=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Twitter">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Linkedin">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&is_video=false&description=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&is_video=false&description=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pinterest">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&body=Check out this article: https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f" aria-label="Email">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Pocket">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&title=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="reddit">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&name=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&description=%3ch2%20id%3d%22software-description%22%3eSoftware%20Description%3c%2fh2%3e%0a%3cp%3ephpLDAPadmin%20is%20an%20web-based%20LDAP%20adminstration%20interface%20for%20viewing%20and%20manipulating%20LDAP%20information.%3c%2fp%3e%0a%3ch2%20id%3d%22vulnerability-description%22%3eVulnerability%20Description%3c%2fh2%3e%0a%3cp%3e%3ccode%3e%24request%5b%27form%27%5d%3c%2fcode%3e%20and%20%3ccode%3e%24request%5b%27rdn%27%5d%3c%2fcode%3e%20parameters%20in%20file%20%3ccode%3ehtdocs%2fentry_chooser.php%3c%2fcode%3e%20aren%26rsquo%3bt%20properly%20sanitized%20before%20being%20displayed%20to%20the%20user%2c%20which%20allows%20a%20remote%20attacker%20to%20inject%20arbitrary%20HTML%2fJavaScript%20code%20in%20a%20user%26rsquo%3bs%20context.%3c%2fp%3e%0a%3cscript%20src%3d%22https%3a%2f%2fgist.github.com%2fxd4rker%2f0bcac2062fe59df80b283790ad71b0c7.js%22%3e%3c%2fscript%3e%0a%3cp%3eThis%20vulnerability%2c%20if%20successfully%20exploited%2c%20can%20lead%20to%20data%20manipulation%20or%20information%20leakage%20as%20it%20is%20demonstrated%20in%20this%20PoC%20video%3a%3c%2fp%3e%0a%3cdiv%20style%3d%22position%3a%20relative%3b%20padding-bottom%3a%2056.25%25%3b%20height%3a%200%3b%20overflow%3a%20hidden%3b%22%3e%0a%20%20%20%20%20%20%3ciframe%20allow%3d%22accelerometer%3b%20autoplay%3b%20clipboard-write%3b%20encrypted-media%3b%20gyroscope%3b%20picture-in-picture%3b%20web-share%3b%20fullscreen%22%20loading%3d%22eager%22%20referrerpolicy%3d%22strict-origin-when-cross-origin%22%20src%3d%22https%3a%2f%2fwww.youtube.com%2fembed%2fWw7LD_bmH-o%3fautoplay%3d0%26amp%3bcontrols%3d1%26amp%3bend%3d0%26amp%3bloop%3d0%26amp%3bmute%3d0%26amp%3bstart%3d0%22%20style%3d%22position%3a%20absolute%3b%20top%3a%200%3b%20left%3a%200%3b%20width%3a%20100%25%3b%20height%3a%20100%25%3b%20border%3a0%3b%22%20title%3d%22YouTube%20video%22%3e%3c%2fiframe%3e%0a%20%20%20%20%3c%2fdiv%3e%0a%0a%3chr%3e%0a%3ch2%20id%3d%22proof-of-concept-poc%22%3eProof%20of%20Concept%20%28PoC%29%3c%2fh2%3e%0a%3cp%3e%3cstrong%3eXSS%20via%20the%20%3ccode%3eform%3c%2fcode%3e%20parameter%3a%3c%2fstrong%3e%3c%2fp%3e" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&name=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29&description=%3ch2%20id%3d%22software-description%22%3eSoftware%20Description%3c%2fh2%3e%0a%3cp%3ephpLDAPadmin%20is%20an%20web-based%20LDAP%20adminstration%20interface%20for%20viewing%20and%20manipulating%20LDAP%20information.%3c%2fp%3e%0a%3ch2%20id%3d%22vulnerability-description%22%3eVulnerability%20Description%3c%2fh2%3e%0a%3cp%3e%3ccode%3e%24request%5b%27form%27%5d%3c%2fcode%3e%20and%20%3ccode%3e%24request%5b%27rdn%27%5d%3c%2fcode%3e%20parameters%20in%20file%20%3ccode%3ehtdocs%2fentry_chooser.php%3c%2fcode%3e%20aren%26rsquo%3bt%20properly%20sanitized%20before%20being%20displayed%20to%20the%20user%2c%20which%20allows%20a%20remote%20attacker%20to%20inject%20arbitrary%20HTML%2fJavaScript%20code%20in%20a%20user%26rsquo%3bs%20context.%3c%2fp%3e%0a%3cscript%20src%3d%22https%3a%2f%2fgist.github.com%2fxd4rker%2f0bcac2062fe59df80b283790ad71b0c7.js%22%3e%3c%2fscript%3e%0a%3cp%3eThis%20vulnerability%2c%20if%20successfully%20exploited%2c%20can%20lead%20to%20data%20manipulation%20or%20information%20leakage%20as%20it%20is%20demonstrated%20in%20this%20PoC%20video%3a%3c%2fp%3e%0a%3cdiv%20style%3d%22position%3a%20relative%3b%20padding-bottom%3a%2056.25%25%3b%20height%3a%200%3b%20overflow%3a%20hidden%3b%22%3e%0a%20%20%20%20%20%20%3ciframe%20allow%3d%22accelerometer%3b%20autoplay%3b%20clipboard-write%3b%20encrypted-media%3b%20gyroscope%3b%20picture-in-picture%3b%20web-share%3b%20fullscreen%22%20loading%3d%22eager%22%20referrerpolicy%3d%22strict-origin-when-cross-origin%22%20src%3d%22https%3a%2f%2fwww.youtube.com%2fembed%2fWw7LD_bmH-o%3fautoplay%3d0%26amp%3bcontrols%3d1%26amp%3bend%3d0%26amp%3bloop%3d0%26amp%3bmute%3d0%26amp%3bstart%3d0%22%20style%3d%22position%3a%20absolute%3b%20top%3a%200%3b%20left%3a%200%3b%20width%3a%20100%25%3b%20height%3a%20100%25%3b%20border%3a0%3b%22%20title%3d%22YouTube%20video%22%3e%3c%2fiframe%3e%0a%20%20%20%20%3c%2fdiv%3e%0a%0a%3chr%3e%0a%3ch2%20id%3d%22proof-of-concept-poc%22%3eProof%20of%20Concept%20%28PoC%29%3c%2fh2%3e%0a%3cp%3e%3cstrong%3eXSS%20via%20the%20%3ccode%3eform%3c%2fcode%3e%20parameter%3a%3c%2fstrong%3e%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fhijacking-phpldapadmin-xss%2f&t=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fhijacking-phpldapadmin-xss%2f&t=Hijacking%20phpLDAPadmin%20account%20using%20a%20Cross-site%20scripting%20vulnerability%20%28CVE-2017-11107%29" aria-label="Hacker News">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>

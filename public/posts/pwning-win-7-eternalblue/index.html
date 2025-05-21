@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -9,12 +9,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> Pwning Windows 7 with ETERNALBLUE &amp; DOUBLEPULSAR (Metasploit) | Ismail Belkacim</title>
-  <link rel = 'canonical' href = 'http://localhost:1313/posts/pwning-win-7-eternalblue/'>
+  <link rel = 'canonical' href = 'https://blog.belkacim.com/posts/pwning-win-7-eternalblue/'>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:url" content="http://localhost:1313/posts/pwning-win-7-eternalblue/">
+  <meta property="og:url" content="https://blog.belkacim.com/posts/pwning-win-7-eternalblue/">
   <meta property="og:site_name" content="Ismail Belkacim">
   <meta property="og:title" content="Pwning Windows 7 with ETERNALBLUE & DOUBLEPULSAR (Metasploit)">
   <meta property="og:description" content="Thanks to @UnaPibaGeek &amp; @pablogonzalezpe for their efforts to develop the Metasploit modules.
@@ -40,7 +40,7 @@ Windows 2000 Windows XP Windows 7 Windows 8 Windows Server 2000 up to 2012 R2 Ho
     
   
   
-  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+  <link rel="stylesheet" href="https://blog.belkacim.com/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
 
   
   
@@ -52,10 +52,8 @@ Windows 2000 Windows XP Windows 7 Windows 8 Windows Server 2000 up to 2012 R2 Ho
   
 
   
-<link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
+<link rel="icon" type="image/png" href="https://blog.belkacim.com/images/favicon.ico" />
 
-  
-  
   
   
     
@@ -102,14 +100,14 @@ Windows 2000 Windows XP Windows 7 Windows 8 Windows Server 2000 up to 2012 R2 Ho
       <ul>
         
         <li>
-          <a class="icon" href=" http://localhost:1313/posts/csaw-ctf-2015-forensics-write-up/" aria-label="Previous">
+          <a class="icon" href=" https://blog.belkacim.com/posts/csaw-ctf-2015-forensics-write-up/" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
         
         
         <li>
-          <a class="icon" href="http://localhost:1313/posts/hijacking-phpldapadmin-xss/" aria-label="Next">
+          <a class="icon" href="https://blog.belkacim.com/posts/hijacking-phpldapadmin-xss/" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
@@ -140,47 +138,47 @@ Windows 2000 Windows XP Windows 7 Windows 8 Windows Server 2000 up to 2012 R2 Ho
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f" aria-label="Facebook">
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&text=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&text=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Twitter">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Linkedin">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&is_video=false&description=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&is_video=false&description=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Pinterest">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29&body=Check out this article: https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f" aria-label="Email">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Pocket">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="reddit">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&name=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29&description=%3cdiv%20style%3d%22position%3a%20relative%3b%20padding-bottom%3a%2056.25%25%3b%20height%3a%200%3b%20overflow%3a%20hidden%3b%22%3e%0a%20%20%20%20%20%20%3ciframe%20allow%3d%22accelerometer%3b%20autoplay%3b%20clipboard-write%3b%20encrypted-media%3b%20gyroscope%3b%20picture-in-picture%3b%20web-share%3b%20fullscreen%22%20loading%3d%22eager%22%20referrerpolicy%3d%22strict-origin-when-cross-origin%22%20src%3d%22https%3a%2f%2fwww.youtube.com%2fembed%2f-AMiSj6KwXo%3fautoplay%3d0%26amp%3bcontrols%3d1%26amp%3bend%3d0%26amp%3bloop%3d0%26amp%3bmute%3d0%26amp%3bstart%3d0%22%20style%3d%22position%3a%20absolute%3b%20top%3a%200%3b%20left%3a%200%3b%20width%3a%20100%25%3b%20height%3a%20100%25%3b%20border%3a0%3b%22%20title%3d%22YouTube%20video%22%3e%3c%2fiframe%3e%0a%20%20%20%20%3c%2fdiv%3e%0a%0a%3cp%3eThanks%20to%20%3ccode%3e%40UnaPibaGeek%3c%2fcode%3e%20%26amp%3b%20%3ccode%3e%40pablogonzalezpe%3c%2fcode%3e%20for%20their%20efforts%20to%20develop%20the%20Metasploit%20modules.%3c%2fp%3e%0a%3cp%3eModules%20can%20be%20found%20here%20%28Scanner%20%2b%20Exploit%29%3a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href%3d%22https%3a%2f%2fpacketstormsecurity.com%2ffiles%2f142181%2fMicrosoft-Windows-MS17-010-SMB-Remote-Code-Execution.html%22%3ehttps%3a%2f%2fpacketstormsecurity.com%2ffiles%2f142181%2fMicrosoft-Windows-MS17-010-SMB-Remote-Code-Execution.html%3c%2fa%3e%3c%2fli%3e%0a%3cli%3e%3ca%20href%3d%22https%3a%2f%2fgithub.com%2fElevenPaths%2fEternalblue-Doublepulsar-Metasploit%22%3ehttps%3a%2f%2fgithub.com%2fElevenPaths%2fEternalblue-Doublepulsar-Metasploit%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3eThis%20vulnerability%20affects%3a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3eWindows%202000%3c%2fli%3e%0a%3cli%3eWindows%20XP%3c%2fli%3e%0a%3cli%3eWindows%207%3c%2fli%3e%0a%3cli%3eWindows%208%3c%2fli%3e%0a%3cli%3eWindows%20Server%202000%20up%20to%202012%20R2%3c%2fli%3e%0a%3c%2ful%3e%0a%3chr%3e%0a%3ch2%20id%3d%22how-to-protect-yourself%22%3eHow%20to%20protect%20yourself%3c%2fh2%3e%0a%3cp%3eIf%20you%20still%20haven%26rsquo%3bt%20updated%20your%20system%2c%20you%20should%20probably%20do%20it%20right%20away.%20If%20for%20some%20reason%20you%20aren%26rsquo%3bt%20able%20to%20apply%20updates%2c%20consider%20disabling%20SMB%20protocols.%3c%2fp%3e" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&name=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29&description=%3cdiv%20style%3d%22position%3a%20relative%3b%20padding-bottom%3a%2056.25%25%3b%20height%3a%200%3b%20overflow%3a%20hidden%3b%22%3e%0a%20%20%20%20%20%20%3ciframe%20allow%3d%22accelerometer%3b%20autoplay%3b%20clipboard-write%3b%20encrypted-media%3b%20gyroscope%3b%20picture-in-picture%3b%20web-share%3b%20fullscreen%22%20loading%3d%22eager%22%20referrerpolicy%3d%22strict-origin-when-cross-origin%22%20src%3d%22https%3a%2f%2fwww.youtube.com%2fembed%2f-AMiSj6KwXo%3fautoplay%3d0%26amp%3bcontrols%3d1%26amp%3bend%3d0%26amp%3bloop%3d0%26amp%3bmute%3d0%26amp%3bstart%3d0%22%20style%3d%22position%3a%20absolute%3b%20top%3a%200%3b%20left%3a%200%3b%20width%3a%20100%25%3b%20height%3a%20100%25%3b%20border%3a0%3b%22%20title%3d%22YouTube%20video%22%3e%3c%2fiframe%3e%0a%20%20%20%20%3c%2fdiv%3e%0a%0a%3cp%3eThanks%20to%20%3ccode%3e%40UnaPibaGeek%3c%2fcode%3e%20%26amp%3b%20%3ccode%3e%40pablogonzalezpe%3c%2fcode%3e%20for%20their%20efforts%20to%20develop%20the%20Metasploit%20modules.%3c%2fp%3e%0a%3cp%3eModules%20can%20be%20found%20here%20%28Scanner%20%2b%20Exploit%29%3a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href%3d%22https%3a%2f%2fpacketstormsecurity.com%2ffiles%2f142181%2fMicrosoft-Windows-MS17-010-SMB-Remote-Code-Execution.html%22%3ehttps%3a%2f%2fpacketstormsecurity.com%2ffiles%2f142181%2fMicrosoft-Windows-MS17-010-SMB-Remote-Code-Execution.html%3c%2fa%3e%3c%2fli%3e%0a%3cli%3e%3ca%20href%3d%22https%3a%2f%2fgithub.com%2fElevenPaths%2fEternalblue-Doublepulsar-Metasploit%22%3ehttps%3a%2f%2fgithub.com%2fElevenPaths%2fEternalblue-Doublepulsar-Metasploit%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3eThis%20vulnerability%20affects%3a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3eWindows%202000%3c%2fli%3e%0a%3cli%3eWindows%20XP%3c%2fli%3e%0a%3cli%3eWindows%207%3c%2fli%3e%0a%3cli%3eWindows%208%3c%2fli%3e%0a%3cli%3eWindows%20Server%202000%20up%20to%202012%20R2%3c%2fli%3e%0a%3c%2ful%3e%0a%3chr%3e%0a%3ch2%20id%3d%22how-to-protect-yourself%22%3eHow%20to%20protect%20yourself%3c%2fh2%3e%0a%3cp%3eIf%20you%20still%20haven%26rsquo%3bt%20updated%20your%20system%2c%20you%20should%20probably%20do%20it%20right%20away.%20If%20for%20some%20reason%20you%20aren%26rsquo%3bt%20able%20to%20apply%20updates%2c%20consider%20disabling%20SMB%20protocols.%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&t=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&t=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Hacker News">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -294,47 +292,47 @@ Windows 2000 Windows XP Windows 7 Windows 8 Windows Server 2000 up to 2012 R2 Ho
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f" aria-label="Facebook">
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&text=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&text=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Twitter">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Linkedin">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&is_video=false&description=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&is_video=false&description=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Pinterest">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29&body=Check out this article: https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f" aria-label="Email">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Pocket">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&title=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="reddit">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&name=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29&description=%3cdiv%20style%3d%22position%3a%20relative%3b%20padding-bottom%3a%2056.25%25%3b%20height%3a%200%3b%20overflow%3a%20hidden%3b%22%3e%0a%20%20%20%20%20%20%3ciframe%20allow%3d%22accelerometer%3b%20autoplay%3b%20clipboard-write%3b%20encrypted-media%3b%20gyroscope%3b%20picture-in-picture%3b%20web-share%3b%20fullscreen%22%20loading%3d%22eager%22%20referrerpolicy%3d%22strict-origin-when-cross-origin%22%20src%3d%22https%3a%2f%2fwww.youtube.com%2fembed%2f-AMiSj6KwXo%3fautoplay%3d0%26amp%3bcontrols%3d1%26amp%3bend%3d0%26amp%3bloop%3d0%26amp%3bmute%3d0%26amp%3bstart%3d0%22%20style%3d%22position%3a%20absolute%3b%20top%3a%200%3b%20left%3a%200%3b%20width%3a%20100%25%3b%20height%3a%20100%25%3b%20border%3a0%3b%22%20title%3d%22YouTube%20video%22%3e%3c%2fiframe%3e%0a%20%20%20%20%3c%2fdiv%3e%0a%0a%3cp%3eThanks%20to%20%3ccode%3e%40UnaPibaGeek%3c%2fcode%3e%20%26amp%3b%20%3ccode%3e%40pablogonzalezpe%3c%2fcode%3e%20for%20their%20efforts%20to%20develop%20the%20Metasploit%20modules.%3c%2fp%3e%0a%3cp%3eModules%20can%20be%20found%20here%20%28Scanner%20%2b%20Exploit%29%3a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href%3d%22https%3a%2f%2fpacketstormsecurity.com%2ffiles%2f142181%2fMicrosoft-Windows-MS17-010-SMB-Remote-Code-Execution.html%22%3ehttps%3a%2f%2fpacketstormsecurity.com%2ffiles%2f142181%2fMicrosoft-Windows-MS17-010-SMB-Remote-Code-Execution.html%3c%2fa%3e%3c%2fli%3e%0a%3cli%3e%3ca%20href%3d%22https%3a%2f%2fgithub.com%2fElevenPaths%2fEternalblue-Doublepulsar-Metasploit%22%3ehttps%3a%2f%2fgithub.com%2fElevenPaths%2fEternalblue-Doublepulsar-Metasploit%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3eThis%20vulnerability%20affects%3a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3eWindows%202000%3c%2fli%3e%0a%3cli%3eWindows%20XP%3c%2fli%3e%0a%3cli%3eWindows%207%3c%2fli%3e%0a%3cli%3eWindows%208%3c%2fli%3e%0a%3cli%3eWindows%20Server%202000%20up%20to%202012%20R2%3c%2fli%3e%0a%3c%2ful%3e%0a%3chr%3e%0a%3ch2%20id%3d%22how-to-protect-yourself%22%3eHow%20to%20protect%20yourself%3c%2fh2%3e%0a%3cp%3eIf%20you%20still%20haven%26rsquo%3bt%20updated%20your%20system%2c%20you%20should%20probably%20do%20it%20right%20away.%20If%20for%20some%20reason%20you%20aren%26rsquo%3bt%20able%20to%20apply%20updates%2c%20consider%20disabling%20SMB%20protocols.%3c%2fp%3e" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&name=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29&description=%3cdiv%20style%3d%22position%3a%20relative%3b%20padding-bottom%3a%2056.25%25%3b%20height%3a%200%3b%20overflow%3a%20hidden%3b%22%3e%0a%20%20%20%20%20%20%3ciframe%20allow%3d%22accelerometer%3b%20autoplay%3b%20clipboard-write%3b%20encrypted-media%3b%20gyroscope%3b%20picture-in-picture%3b%20web-share%3b%20fullscreen%22%20loading%3d%22eager%22%20referrerpolicy%3d%22strict-origin-when-cross-origin%22%20src%3d%22https%3a%2f%2fwww.youtube.com%2fembed%2f-AMiSj6KwXo%3fautoplay%3d0%26amp%3bcontrols%3d1%26amp%3bend%3d0%26amp%3bloop%3d0%26amp%3bmute%3d0%26amp%3bstart%3d0%22%20style%3d%22position%3a%20absolute%3b%20top%3a%200%3b%20left%3a%200%3b%20width%3a%20100%25%3b%20height%3a%20100%25%3b%20border%3a0%3b%22%20title%3d%22YouTube%20video%22%3e%3c%2fiframe%3e%0a%20%20%20%20%3c%2fdiv%3e%0a%0a%3cp%3eThanks%20to%20%3ccode%3e%40UnaPibaGeek%3c%2fcode%3e%20%26amp%3b%20%3ccode%3e%40pablogonzalezpe%3c%2fcode%3e%20for%20their%20efforts%20to%20develop%20the%20Metasploit%20modules.%3c%2fp%3e%0a%3cp%3eModules%20can%20be%20found%20here%20%28Scanner%20%2b%20Exploit%29%3a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3e%3ca%20href%3d%22https%3a%2f%2fpacketstormsecurity.com%2ffiles%2f142181%2fMicrosoft-Windows-MS17-010-SMB-Remote-Code-Execution.html%22%3ehttps%3a%2f%2fpacketstormsecurity.com%2ffiles%2f142181%2fMicrosoft-Windows-MS17-010-SMB-Remote-Code-Execution.html%3c%2fa%3e%3c%2fli%3e%0a%3cli%3e%3ca%20href%3d%22https%3a%2f%2fgithub.com%2fElevenPaths%2fEternalblue-Doublepulsar-Metasploit%22%3ehttps%3a%2f%2fgithub.com%2fElevenPaths%2fEternalblue-Doublepulsar-Metasploit%3c%2fa%3e%3c%2fli%3e%0a%3c%2ful%3e%0a%3cp%3eThis%20vulnerability%20affects%3a%3c%2fp%3e%0a%3cul%3e%0a%3cli%3eWindows%202000%3c%2fli%3e%0a%3cli%3eWindows%20XP%3c%2fli%3e%0a%3cli%3eWindows%207%3c%2fli%3e%0a%3cli%3eWindows%208%3c%2fli%3e%0a%3cli%3eWindows%20Server%202000%20up%20to%202012%20R2%3c%2fli%3e%0a%3c%2ful%3e%0a%3chr%3e%0a%3ch2%20id%3d%22how-to-protect-yourself%22%3eHow%20to%20protect%20yourself%3c%2fh2%3e%0a%3cp%3eIf%20you%20still%20haven%26rsquo%3bt%20updated%20your%20system%2c%20you%20should%20probably%20do%20it%20right%20away.%20If%20for%20some%20reason%20you%20aren%26rsquo%3bt%20able%20to%20apply%20updates%2c%20consider%20disabling%20SMB%20protocols.%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fpwning-win-7-eternalblue%2f&t=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fpwning-win-7-eternalblue%2f&t=Pwning%20Windows%207%20with%20ETERNALBLUE%20%26%20DOUBLEPULSAR%20%28Metasploit%29" aria-label="Hacker News">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>

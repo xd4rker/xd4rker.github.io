@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -9,12 +9,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> SU-CTF 2014: Steganography 100 write-up | Ismail Belkacim</title>
-  <link rel = 'canonical' href = 'http://localhost:1313/posts/su-ctf-2014-steganography-write-up/'>
+  <link rel = 'canonical' href = 'https://blog.belkacim.com/posts/su-ctf-2014-steganography-write-up/'>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:url" content="http://localhost:1313/posts/su-ctf-2014-steganography-write-up/">
+  <meta property="og:url" content="https://blog.belkacim.com/posts/su-ctf-2014-steganography-write-up/">
   <meta property="og:site_name" content="Ismail Belkacim">
   <meta property="og:title" content="SU-CTF 2014: Steganography 100 write-up">
   <meta property="og:description" content="Category: Steganography
@@ -46,7 +46,7 @@ The flag was: e5353bb7b575578bd4da1c898a8e2d7667">
     
   
   
-  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+  <link rel="stylesheet" href="https://blog.belkacim.com/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
 
   
   
@@ -58,10 +58,8 @@ The flag was: e5353bb7b575578bd4da1c898a8e2d7667">
   
 
   
-<link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
+<link rel="icon" type="image/png" href="https://blog.belkacim.com/images/favicon.ico" />
 
-  
-  
   
   
     
@@ -109,7 +107,7 @@ The flag was: e5353bb7b575578bd4da1c898a8e2d7667">
         
         
         <li>
-          <a class="icon" href="http://localhost:1313/posts/csaw-ctf-2015-forensics-write-up/" aria-label="Next">
+          <a class="icon" href="https://blog.belkacim.com/posts/csaw-ctf-2015-forensics-write-up/" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
@@ -140,47 +138,47 @@ The flag was: e5353bb7b575578bd4da1c898a8e2d7667">
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f" aria-label="Facebook">
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&text=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&text=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Twitter">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Linkedin">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&is_video=false&description=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&is_video=false&description=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Pinterest">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=SU-CTF%202014%3a%20Steganography%20100%20write-up&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=SU-CTF%202014%3a%20Steganography%20100%20write-up&body=Check out this article: https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f" aria-label="Email">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Pocket">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="reddit">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&name=SU-CTF%202014%3a%20Steganography%20100%20write-up&description=%3cp%3e%3cstrong%3eCategory%3a%3c%2fstrong%3e%20Steganography%3cbr%3e%0a%3cstrong%3ePoints%3a%3c%2fstrong%3e%20100%3cbr%3e%0a%3cstrong%3eChallenge%20Description%3a%3c%2fstrong%3e%3c%2fp%3e%0a%3cblockquote%3e%0a%3cp%3e%26ldquo%3bHear%20With%20Your%20Eyes%26rdquo%3b%3c%2fp%3e%3c%2fblockquote%3e%0a%3cp%3eIn%20this%20challenge%2c%20we%20were%20given%20a%20%3ccode%3e.wav%3c%2fcode%3e%20file%20which%20we%20somehow%20had%20to%20decrypt%20to%20get%20the%20flag.%3c%2fp%3e%0a%3cp%3eThis%20was%20a%20pretty%20easy%20one%20to%20be%20honest.%20After%20hearing%20the%20audio%2c%20the%20first%20thing%20that%20came%20to%20my%20mind%20was%20to%20use%20a%20signal%20analyser.%20For%20this%2c%20I%20used%20%3cstrong%3ebaudline%3c%2fstrong%3e.%20The%20output%20was%20as%20follows%3a%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22images%2fimage-1.png%22%3e%3cimg%20src%3d%22images%2fimage-1.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3cp%3e%3cstrong%3eThe%20flag%20was%3a%3c%2fstrong%3e%20%3ccode%3ee5353bb7b575578bd4da1c898a8e2d7667%3c%2fcode%3e%3c%2fp%3e" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&name=SU-CTF%202014%3a%20Steganography%20100%20write-up&description=%3cp%3e%3cstrong%3eCategory%3a%3c%2fstrong%3e%20Steganography%3cbr%3e%0a%3cstrong%3ePoints%3a%3c%2fstrong%3e%20100%3cbr%3e%0a%3cstrong%3eChallenge%20Description%3a%3c%2fstrong%3e%3c%2fp%3e%0a%3cblockquote%3e%0a%3cp%3e%26ldquo%3bHear%20With%20Your%20Eyes%26rdquo%3b%3c%2fp%3e%3c%2fblockquote%3e%0a%3cp%3eIn%20this%20challenge%2c%20we%20were%20given%20a%20%3ccode%3e.wav%3c%2fcode%3e%20file%20which%20we%20somehow%20had%20to%20decrypt%20to%20get%20the%20flag.%3c%2fp%3e%0a%3cp%3eThis%20was%20a%20pretty%20easy%20one%20to%20be%20honest.%20After%20hearing%20the%20audio%2c%20the%20first%20thing%20that%20came%20to%20my%20mind%20was%20to%20use%20a%20signal%20analyser.%20For%20this%2c%20I%20used%20%3cstrong%3ebaudline%3c%2fstrong%3e.%20The%20output%20was%20as%20follows%3a%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22images%2fimage-1.png%22%3e%3cimg%20src%3d%22images%2fimage-1.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3cp%3e%3cstrong%3eThe%20flag%20was%3a%3c%2fstrong%3e%20%3ccode%3ee5353bb7b575578bd4da1c898a8e2d7667%3c%2fcode%3e%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&t=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&t=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Hacker News">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -271,47 +269,47 @@ The flag was: e5353bb7b575578bd4da1c898a8e2d7667">
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f" aria-label="Facebook">
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&text=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&text=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Twitter">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Linkedin">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&is_video=false&description=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&is_video=false&description=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Pinterest">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=SU-CTF%202014%3a%20Steganography%20100%20write-up&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=SU-CTF%202014%3a%20Steganography%20100%20write-up&body=Check out this article: https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f" aria-label="Email">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Pocket">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&title=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="reddit">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&name=SU-CTF%202014%3a%20Steganography%20100%20write-up&description=%3cp%3e%3cstrong%3eCategory%3a%3c%2fstrong%3e%20Steganography%3cbr%3e%0a%3cstrong%3ePoints%3a%3c%2fstrong%3e%20100%3cbr%3e%0a%3cstrong%3eChallenge%20Description%3a%3c%2fstrong%3e%3c%2fp%3e%0a%3cblockquote%3e%0a%3cp%3e%26ldquo%3bHear%20With%20Your%20Eyes%26rdquo%3b%3c%2fp%3e%3c%2fblockquote%3e%0a%3cp%3eIn%20this%20challenge%2c%20we%20were%20given%20a%20%3ccode%3e.wav%3c%2fcode%3e%20file%20which%20we%20somehow%20had%20to%20decrypt%20to%20get%20the%20flag.%3c%2fp%3e%0a%3cp%3eThis%20was%20a%20pretty%20easy%20one%20to%20be%20honest.%20After%20hearing%20the%20audio%2c%20the%20first%20thing%20that%20came%20to%20my%20mind%20was%20to%20use%20a%20signal%20analyser.%20For%20this%2c%20I%20used%20%3cstrong%3ebaudline%3c%2fstrong%3e.%20The%20output%20was%20as%20follows%3a%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22images%2fimage-1.png%22%3e%3cimg%20src%3d%22images%2fimage-1.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3cp%3e%3cstrong%3eThe%20flag%20was%3a%3c%2fstrong%3e%20%3ccode%3ee5353bb7b575578bd4da1c898a8e2d7667%3c%2fcode%3e%3c%2fp%3e" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&name=SU-CTF%202014%3a%20Steganography%20100%20write-up&description=%3cp%3e%3cstrong%3eCategory%3a%3c%2fstrong%3e%20Steganography%3cbr%3e%0a%3cstrong%3ePoints%3a%3c%2fstrong%3e%20100%3cbr%3e%0a%3cstrong%3eChallenge%20Description%3a%3c%2fstrong%3e%3c%2fp%3e%0a%3cblockquote%3e%0a%3cp%3e%26ldquo%3bHear%20With%20Your%20Eyes%26rdquo%3b%3c%2fp%3e%3c%2fblockquote%3e%0a%3cp%3eIn%20this%20challenge%2c%20we%20were%20given%20a%20%3ccode%3e.wav%3c%2fcode%3e%20file%20which%20we%20somehow%20had%20to%20decrypt%20to%20get%20the%20flag.%3c%2fp%3e%0a%3cp%3eThis%20was%20a%20pretty%20easy%20one%20to%20be%20honest.%20After%20hearing%20the%20audio%2c%20the%20first%20thing%20that%20came%20to%20my%20mind%20was%20to%20use%20a%20signal%20analyser.%20For%20this%2c%20I%20used%20%3cstrong%3ebaudline%3c%2fstrong%3e.%20The%20output%20was%20as%20follows%3a%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22images%2fimage-1.png%22%3e%3cimg%20src%3d%22images%2fimage-1.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3cp%3e%3cstrong%3eThe%20flag%20was%3a%3c%2fstrong%3e%20%3ccode%3ee5353bb7b575578bd4da1c898a8e2d7667%3c%2fcode%3e%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsu-ctf-2014-steganography-write-up%2f&t=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fsu-ctf-2014-steganography-write-up%2f&t=SU-CTF%202014%3a%20Steganography%20100%20write-up" aria-label="Hacker News">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>

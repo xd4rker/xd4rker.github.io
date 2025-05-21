@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Ismail Belkacim</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://blog.belkacim.com/posts/</link>
     <description>Recent content in Posts on Ismail Belkacim</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Apr 2018 13:53:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.belkacim.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Capture the Ether: Lotteries write-up</title>
-      <link>http://localhost:1313/posts/capture-the-ether-lotteries-write-up/</link>
+      <link>https://blog.belkacim.com/posts/capture-the-ether-lotteries-write-up/</link>
       <pubDate>Mon, 16 Apr 2018 13:53:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/capture-the-ether-lotteries-write-up/</guid>
+      <guid>https://blog.belkacim.com/posts/capture-the-ether-lotteries-write-up/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;images/image-1.png&#34;&gt;&lt;img src=&#34;images/image-1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://capturetheether.com/&#34;&gt;Capture the Ether&lt;/a&gt; is a &amp;ldquo;Capture the Flag&amp;rdquo; style game where you hack Ethereum smart contracts to learn about security.&lt;/p&gt;&#xA;&lt;h2 id=&#34;spoiler-alert&#34;&gt;Spoiler Alert!&lt;/h2&gt;&#xA;&lt;p&gt;In this write-up, I will walk through the first four challenges in the &amp;ldquo;Lotteries&amp;rdquo; category. Each challenge has its own difficulty level and reward points. The goal is to guess the correct value of a variable defined in a smart contract.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;images/image-2.png&#34;&gt;&lt;img src=&#34;images/image-2.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;guess-the-number&#34;&gt;Guess the number&lt;/h2&gt;&#xA;&lt;p&gt;The smart contract for this challenge looks like this:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hijacking phpLDAPadmin account using a Cross-site scripting vulnerability (CVE-2017-11107)</title>
-      <link>http://localhost:1313/posts/hijacking-phpldapadmin-xss/</link>
+      <link>https://blog.belkacim.com/posts/hijacking-phpldapadmin-xss/</link>
       <pubDate>Thu, 20 Jul 2017 11:16:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hijacking-phpldapadmin-xss/</guid>
+      <guid>https://blog.belkacim.com/posts/hijacking-phpldapadmin-xss/</guid>
       <description>&lt;h2 id=&#34;software-description&#34;&gt;Software Description&lt;/h2&gt;&#xA;&lt;p&gt;phpLDAPadmin is an web-based LDAP adminstration interface for viewing and manipulating LDAP information.&lt;/p&gt;&#xA;&lt;h2 id=&#34;vulnerability-description&#34;&gt;Vulnerability Description&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;$request[&#39;form&#39;]&lt;/code&gt; and &lt;code&gt;$request[&#39;rdn&#39;]&lt;/code&gt; parameters in file &lt;code&gt;htdocs/entry_chooser.php&lt;/code&gt; aren&amp;rsquo;t properly sanitized before being displayed to the user, which allows a remote attacker to inject arbitrary HTML/JavaScript code in a user&amp;rsquo;s context.&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/xd4rker/0bcac2062fe59df80b283790ad71b0c7.js&#34;&gt;&lt;/script&gt;&#xA;&lt;p&gt;This vulnerability, if successfully exploited, can lead to data manipulation or information leakage as it is demonstrated in this PoC video:&lt;/p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/Ww7LD_bmH-o?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;proof-of-concept-poc&#34;&gt;Proof of Concept (PoC)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;XSS via the &lt;code&gt;form&lt;/code&gt; parameter:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Pwning Windows 7 with ETERNALBLUE &amp; DOUBLEPULSAR (Metasploit)</title>
-      <link>http://localhost:1313/posts/pwning-win-7-eternalblue/</link>
+      <link>https://blog.belkacim.com/posts/pwning-win-7-eternalblue/</link>
       <pubDate>Sat, 29 Apr 2017 17:17:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/pwning-win-7-eternalblue/</guid>
+      <guid>https://blog.belkacim.com/posts/pwning-win-7-eternalblue/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/-AMiSj6KwXo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;p&gt;Thanks to &lt;code&gt;@UnaPibaGeek&lt;/code&gt; &amp;amp; &lt;code&gt;@pablogonzalezpe&lt;/code&gt; for their efforts to develop the Metasploit modules.&lt;/p&gt;&#xA;&lt;p&gt;Modules can be found here (Scanner + Exploit):&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://packetstormsecurity.com/files/142181/Microsoft-Windows-MS17-010-SMB-Remote-Code-Execution.html&#34;&gt;https://packetstormsecurity.com/files/142181/Microsoft-Windows-MS17-010-SMB-Remote-Code-Execution.html&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit&#34;&gt;https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This vulnerability affects:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Windows 2000&lt;/li&gt;&#xA;&lt;li&gt;Windows XP&lt;/li&gt;&#xA;&lt;li&gt;Windows 7&lt;/li&gt;&#xA;&lt;li&gt;Windows 8&lt;/li&gt;&#xA;&lt;li&gt;Windows Server 2000 up to 2012 R2&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;how-to-protect-yourself&#34;&gt;How to protect yourself&lt;/h2&gt;&#xA;&lt;p&gt;If you still haven&amp;rsquo;t updated your system, you should probably do it right away. If for some reason you aren&amp;rsquo;t able to apply updates, consider disabling SMB protocols.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CSAW CTF 2015 : Forensics 100 Transfer write-up</title>
-      <link>http://localhost:1313/posts/csaw-ctf-2015-forensics-write-up/</link>
+      <link>https://blog.belkacim.com/posts/csaw-ctf-2015-forensics-write-up/</link>
       <pubDate>Sun, 20 Sep 2015 17:51:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/csaw-ctf-2015-forensics-write-up/</guid>
+      <guid>https://blog.belkacim.com/posts/csaw-ctf-2015-forensics-write-up/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Forensics&lt;br&gt;&#xA;&lt;strong&gt;Points:&lt;/strong&gt; 100&lt;br&gt;&#xA;&lt;strong&gt;Challenge Description:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;I was sniffing some web traffic for a while, I think I finally got something interesting. Help me find flag through all these packets.&#xA;&lt;a href=&#34;https://ctf.isis.poly.edu/static/uploads/9816b472715fa536ab95bf43edc10540/net_756d631588cb0a400cc16d1848a5f0fb.pcap&#34;&gt;net_756d631588cb0a400cc16d1848a5f0fb.pcap&lt;/a&gt;&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Opening it up with Wireshark gives some few HTTP packets. After looking through those packets, I noticed that one of them contains the word FLAG.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;images/image-1.png&#34;&gt;&lt;img src=&#34;images/image-1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The start of the conversation contains a python script and some random padding at the end which was more likely to be the script&amp;rsquo;s output.&lt;/p&gt;</description>
     </item>
     <item>
       <title>SU-CTF 2014: Steganography 100 write-up</title>
-      <link>http://localhost:1313/posts/su-ctf-2014-steganography-write-up/</link>
+      <link>https://blog.belkacim.com/posts/su-ctf-2014-steganography-write-up/</link>
       <pubDate>Sun, 28 Sep 2014 03:39:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/su-ctf-2014-steganography-write-up/</guid>
+      <guid>https://blog.belkacim.com/posts/su-ctf-2014-steganography-write-up/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt; Steganography&lt;br&gt;&#xA;&lt;strong&gt;Points:&lt;/strong&gt; 100&lt;br&gt;&#xA;&lt;strong&gt;Challenge Description:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;Hear With Your Eyes&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;In this challenge, we were given a &lt;code&gt;.wav&lt;/code&gt; file which we somehow had to decrypt to get the flag.&lt;/p&gt;&#xA;&lt;p&gt;This was a pretty easy one to be honest. After hearing the audio, the first thing that came to my mind was to use a signal analyser. For this, I used &lt;strong&gt;baudline&lt;/strong&gt;. The output was as follows:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;images/image-1.png&#34;&gt;&lt;img src=&#34;images/image-1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;The flag was:&lt;/strong&gt; &lt;code&gt;e5353bb7b575578bd4da1c898a8e2d7667&lt;/code&gt;&lt;/p&gt;</description>
     </item>
   </channel>

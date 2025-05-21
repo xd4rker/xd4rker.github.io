@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://blog.belkacim.com/</loc>
     <lastmod>2025-05-20T22:35:05+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://blog.belkacim.com/projects/</loc>
     <lastmod>2025-05-20T22:35:05+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://blog.belkacim.com/about/</loc>
     <lastmod>2025-05-20T12:58:04+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/capture-the-ether-lotteries-write-up/</loc>
+    <loc>https://blog.belkacim.com/posts/capture-the-ether-lotteries-write-up/</loc>
     <lastmod>2018-04-16T13:53:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://blog.belkacim.com/posts/</loc>
     <lastmod>2018-04-16T13:53:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hijacking-phpldapadmin-xss/</loc>
+    <loc>https://blog.belkacim.com/posts/hijacking-phpldapadmin-xss/</loc>
     <lastmod>2017-07-20T11:16:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/pwning-win-7-eternalblue/</loc>
+    <loc>https://blog.belkacim.com/posts/pwning-win-7-eternalblue/</loc>
     <lastmod>2017-04-29T17:17:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/csaw-ctf-2015-forensics-write-up/</loc>
+    <loc>https://blog.belkacim.com/posts/csaw-ctf-2015-forensics-write-up/</loc>
     <lastmod>2015-09-20T17:51:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/su-ctf-2014-steganography-write-up/</loc>
+    <loc>https://blog.belkacim.com/posts/su-ctf-2014-steganography-write-up/</loc>
     <lastmod>2014-09-28T03:39:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://blog.belkacim.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://blog.belkacim.com/tags/</loc>
   </url>
 </urlset>

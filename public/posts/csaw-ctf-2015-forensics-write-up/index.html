@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -9,12 +9,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title> CSAW CTF 2015 : Forensics 100 Transfer write-up | Ismail Belkacim</title>
-  <link rel = 'canonical' href = 'http://localhost:1313/posts/csaw-ctf-2015-forensics-write-up/'>
+  <link rel = 'canonical' href = 'https://blog.belkacim.com/posts/csaw-ctf-2015-forensics-write-up/'>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:url" content="http://localhost:1313/posts/csaw-ctf-2015-forensics-write-up/">
+  <meta property="og:url" content="https://blog.belkacim.com/posts/csaw-ctf-2015-forensics-write-up/">
   <meta property="og:site_name" content="Ismail Belkacim">
   <meta property="og:title" content="CSAW CTF 2015 : Forensics 100 Transfer write-up">
   <meta property="og:description" content="Category: Forensics
@@ -44,7 +44,7 @@ The start of the conversation contains a python script and some random padding a
     
   
   
-  <link rel="stylesheet" href="http://localhost:1313/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+  <link rel="stylesheet" href="https://blog.belkacim.com/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
 
   
   
@@ -56,10 +56,8 @@ The start of the conversation contains a python script and some random padding a
   
 
   
-<link rel="icon" type="image/png" href="http://localhost:1313/images/favicon.ico" />
+<link rel="icon" type="image/png" href="https://blog.belkacim.com/images/favicon.ico" />
 
-  
-  
   
   
     
@@ -106,14 +104,14 @@ The start of the conversation contains a python script and some random padding a
       <ul>
         
         <li>
-          <a class="icon" href=" http://localhost:1313/posts/su-ctf-2014-steganography-write-up/" aria-label="Previous">
+          <a class="icon" href=" https://blog.belkacim.com/posts/su-ctf-2014-steganography-write-up/" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
         
         
         <li>
-          <a class="icon" href="http://localhost:1313/posts/pwning-win-7-eternalblue/" aria-label="Next">
+          <a class="icon" href="https://blog.belkacim.com/posts/pwning-win-7-eternalblue/" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
@@ -144,47 +142,47 @@ The start of the conversation contains a python script and some random padding a
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f" aria-label="Facebook">
       <i class="fab fa-facebook " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&text=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&text=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Twitter">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Linkedin">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&is_video=false&description=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&is_video=false&description=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Pinterest">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up&body=Check out this article: https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f" aria-label="Email">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Pocket">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="reddit">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&name=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up&description=%3cp%3e%3cstrong%3eCategory%3a%3c%2fstrong%3e%20Forensics%3cbr%3e%0a%3cstrong%3ePoints%3a%3c%2fstrong%3e%20100%3cbr%3e%0a%3cstrong%3eChallenge%20Description%3a%3c%2fstrong%3e%3c%2fp%3e%0a%3cblockquote%3e%0a%3cp%3e%26ldquo%3bI%20was%20sniffing%20some%20web%20traffic%20for%20a%20while%2c%20I%20think%20I%20finally%20got%20something%20interesting.%20Help%20me%20find%20flag%20through%20all%20these%20packets.%0a%3ca%20href%3d%22https%3a%2f%2fctf.isis.poly.edu%2fstatic%2fuploads%2f9816b472715fa536ab95bf43edc10540%2fnet_756d631588cb0a400cc16d1848a5f0fb.pcap%22%3enet_756d631588cb0a400cc16d1848a5f0fb.pcap%3c%2fa%3e%26rdquo%3b%3c%2fp%3e%3c%2fblockquote%3e%0a%3cp%3eOpening%20it%20up%20with%20Wireshark%20gives%20some%20few%20HTTP%20packets.%20After%20looking%20through%20those%20packets%2c%20I%20noticed%20that%20one%20of%20them%20contains%20the%20word%20FLAG.%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22images%2fimage-1.png%22%3e%3cimg%20src%3d%22images%2fimage-1.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3cp%3eThe%20start%20of%20the%20conversation%20contains%20a%20python%20script%20and%20some%20random%20padding%20at%20the%20end%20which%20was%20more%20likely%20to%20be%20the%20script%26rsquo%3bs%20output.%3c%2fp%3e" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&name=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up&description=%3cp%3e%3cstrong%3eCategory%3a%3c%2fstrong%3e%20Forensics%3cbr%3e%0a%3cstrong%3ePoints%3a%3c%2fstrong%3e%20100%3cbr%3e%0a%3cstrong%3eChallenge%20Description%3a%3c%2fstrong%3e%3c%2fp%3e%0a%3cblockquote%3e%0a%3cp%3e%26ldquo%3bI%20was%20sniffing%20some%20web%20traffic%20for%20a%20while%2c%20I%20think%20I%20finally%20got%20something%20interesting.%20Help%20me%20find%20flag%20through%20all%20these%20packets.%0a%3ca%20href%3d%22https%3a%2f%2fctf.isis.poly.edu%2fstatic%2fuploads%2f9816b472715fa536ab95bf43edc10540%2fnet_756d631588cb0a400cc16d1848a5f0fb.pcap%22%3enet_756d631588cb0a400cc16d1848a5f0fb.pcap%3c%2fa%3e%26rdquo%3b%3c%2fp%3e%3c%2fblockquote%3e%0a%3cp%3eOpening%20it%20up%20with%20Wireshark%20gives%20some%20few%20HTTP%20packets.%20After%20looking%20through%20those%20packets%2c%20I%20noticed%20that%20one%20of%20them%20contains%20the%20word%20FLAG.%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22images%2fimage-1.png%22%3e%3cimg%20src%3d%22images%2fimage-1.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3cp%3eThe%20start%20of%20the%20conversation%20contains%20a%20python%20script%20and%20some%20random%20padding%20at%20the%20end%20which%20was%20more%20likely%20to%20be%20the%20script%26rsquo%3bs%20output.%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&t=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&t=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Hacker News">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -282,47 +280,47 @@ The start of the conversation contains a python script and some random padding a
   
   
   <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f" aria-label="Facebook">
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f" aria-label="Facebook">
       <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&text=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Twitter">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&text=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Twitter">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Linkedin">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Linkedin">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&is_video=false&description=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Pinterest">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&is_video=false&description=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Pinterest">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f" aria-label="Email">
+    <a class="icon" href="mailto:?subject=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up&body=Check out this article: https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f" aria-label="Email">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Pocket">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Pocket">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="reddit">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&title=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="reddit">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&name=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up&description=%3cp%3e%3cstrong%3eCategory%3a%3c%2fstrong%3e%20Forensics%3cbr%3e%0a%3cstrong%3ePoints%3a%3c%2fstrong%3e%20100%3cbr%3e%0a%3cstrong%3eChallenge%20Description%3a%3c%2fstrong%3e%3c%2fp%3e%0a%3cblockquote%3e%0a%3cp%3e%26ldquo%3bI%20was%20sniffing%20some%20web%20traffic%20for%20a%20while%2c%20I%20think%20I%20finally%20got%20something%20interesting.%20Help%20me%20find%20flag%20through%20all%20these%20packets.%0a%3ca%20href%3d%22https%3a%2f%2fctf.isis.poly.edu%2fstatic%2fuploads%2f9816b472715fa536ab95bf43edc10540%2fnet_756d631588cb0a400cc16d1848a5f0fb.pcap%22%3enet_756d631588cb0a400cc16d1848a5f0fb.pcap%3c%2fa%3e%26rdquo%3b%3c%2fp%3e%3c%2fblockquote%3e%0a%3cp%3eOpening%20it%20up%20with%20Wireshark%20gives%20some%20few%20HTTP%20packets.%20After%20looking%20through%20those%20packets%2c%20I%20noticed%20that%20one%20of%20them%20contains%20the%20word%20FLAG.%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22images%2fimage-1.png%22%3e%3cimg%20src%3d%22images%2fimage-1.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3cp%3eThe%20start%20of%20the%20conversation%20contains%20a%20python%20script%20and%20some%20random%20padding%20at%20the%20end%20which%20was%20more%20likely%20to%20be%20the%20script%26rsquo%3bs%20output.%3c%2fp%3e" aria-label="Tumblr">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&name=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up&description=%3cp%3e%3cstrong%3eCategory%3a%3c%2fstrong%3e%20Forensics%3cbr%3e%0a%3cstrong%3ePoints%3a%3c%2fstrong%3e%20100%3cbr%3e%0a%3cstrong%3eChallenge%20Description%3a%3c%2fstrong%3e%3c%2fp%3e%0a%3cblockquote%3e%0a%3cp%3e%26ldquo%3bI%20was%20sniffing%20some%20web%20traffic%20for%20a%20while%2c%20I%20think%20I%20finally%20got%20something%20interesting.%20Help%20me%20find%20flag%20through%20all%20these%20packets.%0a%3ca%20href%3d%22https%3a%2f%2fctf.isis.poly.edu%2fstatic%2fuploads%2f9816b472715fa536ab95bf43edc10540%2fnet_756d631588cb0a400cc16d1848a5f0fb.pcap%22%3enet_756d631588cb0a400cc16d1848a5f0fb.pcap%3c%2fa%3e%26rdquo%3b%3c%2fp%3e%3c%2fblockquote%3e%0a%3cp%3eOpening%20it%20up%20with%20Wireshark%20gives%20some%20few%20HTTP%20packets.%20After%20looking%20through%20those%20packets%2c%20I%20noticed%20that%20one%20of%20them%20contains%20the%20word%20FLAG.%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22images%2fimage-1.png%22%3e%3cimg%20src%3d%22images%2fimage-1.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3cp%3eThe%20start%20of%20the%20conversation%20contains%20a%20python%20script%20and%20some%20random%20padding%20at%20the%20end%20which%20was%20more%20likely%20to%20be%20the%20script%26rsquo%3bs%20output.%3c%2fp%3e" aria-label="Tumblr">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&t=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Hacker News">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fcsaw-ctf-2015-forensics-write-up%2f&t=CSAW%20CTF%202015%20%3a%20Forensics%20100%20Transfer%20write-up" aria-label="Hacker News">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>
