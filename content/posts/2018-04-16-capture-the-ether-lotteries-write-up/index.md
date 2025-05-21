@@ -1,6 +1,5 @@
 +++
 date = '2018-04-16T13:53:00+00:00'
-draft = true
 title = 'Capture the Ether: Lotteries write-up'
 [[resources]]
 +++

@@ -1,6 +1,5 @@
 +++
 date = '2015-09-20T17:51:00+00:00'
-draft = true
 title = 'CSAW CTF 2015 : Forensics 100 Transfer write-up'
 +++
 
