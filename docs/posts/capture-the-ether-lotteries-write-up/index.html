@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Capture the Ether: Lotteries write-up | Ismail Belkacim</title>
+  <link rel = 'canonical' href = 'https://blog.belkacim.com/posts/capture-the-ether-lotteries-write-up/'>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:url" content="https://blog.belkacim.com/posts/capture-the-ether-lotteries-write-up/">
+  <meta property="og:site_name" content="Ismail Belkacim">
+  <meta property="og:title" content="Capture the Ether: Lotteries write-up">
+  <meta property="og:description" content="Capture the Ether is a “Capture the Flag” style game where you hack Ethereum smart contracts to learn about security.
+Spoiler Alert! In this write-up, I will walk through the first four challenges in the “Lotteries” category. Each challenge has its own difficulty level and reward points. The goal is to guess the correct value of a variable defined in a smart contract.
+Guess the number The smart contract for this challenge looks like this:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-04-16T13:53:00+00:00">
+    <meta property="article:modified_time" content="2018-04-16T13:53:00+00:00">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Capture the Ether: Lotteries write-up">
+  <meta name="twitter:description" content="Capture the Ether is a “Capture the Flag” style game where you hack Ethereum smart contracts to learn about security.
+Spoiler Alert! In this write-up, I will walk through the first four challenges in the “Lotteries” category. Each challenge has its own difficulty level and reward points. The goal is to guess the correct value of a variable defined in a smart contract.
+Guess the number The smart contract for this challenge looks like this:">
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://blog.belkacim.com/css/styles.c05d68261bf086a9d7713c4f8a6215a3601608e267a816a7ee58f139b3d1aae51222aae2081c8e0c6bd35e1334773b7a16283022f31f92afd93bb37e5e822e66.css" integrity="sha512-wF1oJhvwhqnXcTxPimIVo2AWCOJnqBan7ljxObPRquUSIqriCByODGvTXhM0dzt6FigwIvMfkq/ZO7N&#43;XoIuZg=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://blog.belkacim.com/images/favicon.ico" />
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBNXTCSVRS"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RBNXTCSVRS');
+        }
+      </script>
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/projects">Projects</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://blog.belkacim.com/posts/hijacking-phpldapadmin-xss/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="https://blog.belkacim.com/about/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&text=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&title=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&is_video=false&description=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Capture%20the%20Ether%3a%20Lotteries%20write-up&body=Check out this article: https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&title=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&title=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&name=Capture%20the%20Ether%3a%20Lotteries%20write-up&description=%3cp%3e%3ca%20href%3d%22images%2fimage-1.png%22%3e%3cimg%20src%3d%22images%2fimage-1.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22https%3a%2f%2fcapturetheether.com%2f%22%3eCapture%20the%20Ether%3c%2fa%3e%20is%20a%20%26ldquo%3bCapture%20the%20Flag%26rdquo%3b%20style%20game%20where%20you%20hack%20Ethereum%20smart%20contracts%20to%20learn%20about%20security.%3c%2fp%3e%0a%3ch2%20id%3d%22spoiler-alert%22%3eSpoiler%20Alert%21%3c%2fh2%3e%0a%3cp%3eIn%20this%20write-up%2c%20I%20will%20walk%20through%20the%20first%20four%20challenges%20in%20the%20%26ldquo%3bLotteries%26rdquo%3b%20category.%20Each%20challenge%20has%20its%20own%20difficulty%20level%20and%20reward%20points.%20The%20goal%20is%20to%20guess%20the%20correct%20value%20of%20a%20variable%20defined%20in%20a%20smart%20contract.%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22images%2fimage-2.png%22%3e%3cimg%20src%3d%22images%2fimage-2.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3ch2%20id%3d%22guess-the-number%22%3eGuess%20the%20number%3c%2fh2%3e%0a%3cp%3eThe%20smart%20contract%20for%20this%20challenge%20looks%20like%20this%3a%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&t=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#spoiler-alert">Spoiler Alert!</a></li>
+    <li><a href="#guess-the-number">Guess the number</a></li>
+    <li><a href="#guess-the-secret-number">Guess the secret number</a></li>
+    <li><a href="#guess-the-random-number">Guess the random number</a></li>
+    <li><a href="#guess-the-new-number">Guess the new number</a></li>
+  </ul>
+</nav>
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Capture the Ether: Lotteries write-up
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2018-04-16 13:53:00 &#43;0000 &#43;0000" itemprop="datePublished">2018-04-16</time>
+          
+        </div>
+        
+        
+        
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <p><a href="images/image-1.png"><img src="images/image-1.png" alt=""></a></p>
+<p><a href="https://capturetheether.com/">Capture the Ether</a> is a &ldquo;Capture the Flag&rdquo; style game where you hack Ethereum smart contracts to learn about security.</p>
+<h2 id="spoiler-alert">Spoiler Alert!</h2>
+<p>In this write-up, I will walk through the first four challenges in the &ldquo;Lotteries&rdquo; category. Each challenge has its own difficulty level and reward points. The goal is to guess the correct value of a variable defined in a smart contract.</p>
+<p><a href="images/image-2.png"><img src="images/image-2.png" alt=""></a></p>
+<h2 id="guess-the-number">Guess the number</h2>
+<p>The smart contract for this challenge looks like this:</p>
+<script src="https://gist.github.com/xd4rker/f29c91fbc82edef683376da6e632f299.js"></script>
+<p>It has three functions:</p>
+<ul>
+<li><strong><code>GuessTheNumberChallenge()</code></strong>: a payable constructor that tells you how much Ether is required when deploying the smart contract.</li>
+<li><strong><code>isComplete()</code></strong>: it returns true when the smart contract&rsquo;s balance is equal to <code>0</code>.</li>
+<li><strong><code>guess(uint8 n)</code></strong>: It takes a <code>uint8</code> as an argument and compares it with the variable declared in line 4. If the numbers are equal, you will have your Ethers sent back to your address. Note that this function is payable and requires exactly 1 Ether to be sent when making a call.</li>
+</ul>
+<p>Obviously, all we have to do is invoke <code>guess()</code> with <code>42</code> as an argument. I used <a href="https://github.com/ethereum/web3.js/">Web3.js</a> (Ethereum JavaScript API) and <a href="https://metamask.io/">MetaMask</a> for this.</p>
+<p>First you&rsquo;ll need to get the smart contract&rsquo;s <a href="https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI">ABI</a> which will be used to create a contract. the <a href="http://remix.ethereum.org/">Remix</a> IDE will provide you with everything you need to get this done.</p>
+<p>Paste in the code shown bellow and click on &ldquo;Details&rdquo;.</p>
+<p><a href="images/image-3.png"><img src="images/image-3.png" alt=""></a></p>
+<p>You can then copy the ABI by clicking on the clipboard icon.</p>
+<p><a href="images/image-4.png"><img src="images/image-4.png" alt=""></a></p>
+<p>Remember that you can still use <a href="http://remix.ethereum.org/">Remix</a> to compile, deploy and interact with your smart contracts without having to write any code. I kinda preferred using Web3.js because it&rsquo;s more robust.</p>
+<p>The final code to invoke the <code>guess()</code> function should look like this:</p>
+<script src="https://gist.github.com/xd4rker/e81201e59d5848b8e9bd2c1a29949270.js"></script>
+<p>Notice that the transaction must have exactly 1 ether (<code>1e18</code> wei) in its value field, otherwise it would fail.</p>
+<p>Clicking the &ldquo;Check the solution&rdquo; button in the game should show this (nice pixel art btw):</p>
+<p><a href="images/image-5.png"><img src="images/image-5.png" alt=""></a></p>
+<h2 id="guess-the-secret-number">Guess the secret number</h2>
+<p>The code for this challenge is as follow:</p>
+<script src="https://gist.github.com/xd4rker/4cb7f2da09e0034065cb60d310bb74fe.js"></script>
+<p>The challenge says :</p>
+<p><a href="images/image-6.png"><img src="images/image-6.png" alt=""></a></p>
+<p>Same as the previous challenge, but this time we need to find a number that was hashed using the <a href="https://keccak.team/">Keccak-256</a> hashing algorithm.</p>
+<p>By looking at the code, you&rsquo;ll notice that <code>guess()</code> takes a <code>uint8</code> parameter, and according to the <a href="http://solidity.readthedocs.io/en/v0.4.21/types.html#type-deduction">documentation</a>, the highest value of this type is smaller than <code>2000</code>. Makes things easier, right?</p>
+<p>Now we know that the number we&rsquo;re looking for is less than <code>2000</code>, we&rsquo;ll need to write a quick script to brute force it.</p>
+<p>Here is what I came up with :</p>
+<script src="https://gist.github.com/xd4rker/ee1657d3fd4581ed647a4c7fa64b92a8.js"></script>
+<p>Executing it would give <code>170</code> as an answer:</p>
+<p><a href="images/image-7.png"><img src="images/image-7.png" alt=""></a></p>
+<h2 id="guess-the-random-number">Guess the random number</h2>
+<p>The smart contract given in this one looks like this :</p>
+<script src="https://gist.github.com/xd4rker/d170d63fbe306427d9e3aff1281b430c.js"></script>
+<p>As you can see, the answer this time is generated based on the hash of the parent block <code>block.blockhash(block.number - 1)</code> and <code>now</code> which is simply an alias for <code>block.timestamp</code> (current block timestamp). The result keccak256 hash is then being casted to <code>uint8</code>.</p>
+<p>Our smart contract was deployed to address <code>0xd5Ce10BE3745114aABf0382556439bA3Ecb2a524</code>. We can easily lookup the block number in which the transaction was included using Etherscan.</p>
+<p><a href="images/image-8.png"><img src="images/image-8.png" alt=""></a></p>
+<p>Here is the script I used to calculate the answer using the appropriate parent hash and timestamp :</p>
+<script src="https://gist.github.com/xd4rker/6fd01c797303dd1b38ab0eb03891ce5a.js"></script>
+<p>The answer for this challenge was <code>73</code>.</p>
+<p><a href="images/image-9.png"><img src="images/image-9.png" alt=""></a></p>
+<h2 id="guess-the-new-number">Guess the new number</h2>
+<p>In this challenge, the answer is generated on the fly inside the <code>guess()</code> function.</p>
+<script src="https://gist.github.com/xd4rker/0761c77f85523da574680ff995e002c4.js"></script>
+<p>We need to guess the block hash and timestamp before our transaction is made, which seems nearly impossible. Note that these two elements can still be influenced to some degree (<a href="http://solidity.readthedocs.io/en/v0.4.21/units-and-global-variables.html#block-and-transaction-properties">more details</a>), but the solution to this challenge was much simpler than that.</p>
+<p>My first approach to solve this was to predict the block timestamp based on the latest block&rsquo;s timestamp and the <a href="https://etherscan.io/chart/blocktime">average block time</a> which was 14 seconds at the time, and using a higher Gas price to ensure that my transaction is included in the next block.</p>
+<script src="https://gist.github.com/xd4rker/a3503318cb019d65eebe94c812cca77e.js"></script>
+<p>Unfortunately this didn&rsquo;t work. My transactions always ended up being confirmed 3-5 blocks ahead.</p>
+<p>After a few attempts, I realized that I should be doing this from within a smart contract, since we&rsquo;ll have access to the transaction&rsquo;s properties (<code>block.number</code> and <code>block.timestamp</code>).</p>
+<p>Here is the smart contract I made to call <code>guess()</code> from the <code>GuessTheNewNumberChallenge</code> contract with the correct values:</p>
+<script src="https://gist.github.com/xd4rker/cf094fc575e43b363cf192a11a71e940.js"></script>
+<p>Notice that I have declared an unnamed <code>payable</code> function on line 26. This acts as <a href="http://solidity.readthedocs.io/en/v0.4.21/contracts.html#fallback-function">fallback function</a> that allows the smart contract to receive Ether through regular transactions. I have also declared a <code>withdraw()</code> function to recover my Ethers later.</p>
+<p><a href="images/image-10.png"><img src="images/image-10.png" alt=""></a></p>
+<p>And voila, it&rsquo;s done.</p>
+<p>Well, that’s as far as I got for now. The game was incredibly fun, and I wish I had more free time to keep playing.</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Posts</a></li>
+         
+          <li><a href="/projects">Projects</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#spoiler-alert">Spoiler Alert!</a></li>
+    <li><a href="#guess-the-number">Guess the number</a></li>
+    <li><a href="#guess-the-secret-number">Guess the secret number</a></li>
+    <li><a href="#guess-the-random-number">Guess the random number</a></li>
+    <li><a href="#guess-the-new-number">Guess the new number</a></li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&text=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&title=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&is_video=false&description=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Capture%20the%20Ether%3a%20Lotteries%20write-up&body=Check out this article: https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&title=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&title=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&name=Capture%20the%20Ether%3a%20Lotteries%20write-up&description=%3cp%3e%3ca%20href%3d%22images%2fimage-1.png%22%3e%3cimg%20src%3d%22images%2fimage-1.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22https%3a%2f%2fcapturetheether.com%2f%22%3eCapture%20the%20Ether%3c%2fa%3e%20is%20a%20%26ldquo%3bCapture%20the%20Flag%26rdquo%3b%20style%20game%20where%20you%20hack%20Ethereum%20smart%20contracts%20to%20learn%20about%20security.%3c%2fp%3e%0a%3ch2%20id%3d%22spoiler-alert%22%3eSpoiler%20Alert%21%3c%2fh2%3e%0a%3cp%3eIn%20this%20write-up%2c%20I%20will%20walk%20through%20the%20first%20four%20challenges%20in%20the%20%26ldquo%3bLotteries%26rdquo%3b%20category.%20Each%20challenge%20has%20its%20own%20difficulty%20level%20and%20reward%20points.%20The%20goal%20is%20to%20guess%20the%20correct%20value%20of%20a%20variable%20defined%20in%20a%20smart%20contract.%3c%2fp%3e%0a%3cp%3e%3ca%20href%3d%22images%2fimage-2.png%22%3e%3cimg%20src%3d%22images%2fimage-2.png%22%20alt%3d%22%22%3e%3c%2fa%3e%3c%2fp%3e%0a%3ch2%20id%3d%22guess-the-number%22%3eGuess%20the%20number%3c%2fh2%3e%0a%3cp%3eThe%20smart%20contract%20for%20this%20challenge%20looks%20like%20this%3a%3c%2fp%3e" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fblog.belkacim.com%2fposts%2fcapture-the-ether-lotteries-write-up%2f&t=Capture%20the%20Ether%3a%20Lotteries%20write-up" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2025  Ismail Belkacim 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Posts</a></li>
+         
+        <li><a href="/projects">Projects</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+
+</html>

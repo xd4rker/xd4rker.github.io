@@ -1,0 +1,46 @@
+baseURL = 'https://blog.belkacim.com/'
+languageCode = 'en-us'
+title = 'Ismail Belkacim'
+theme = 'cactus'
+publishDir = 'docs'
+
+[params]
+colortheme = "dark"
+mainSectionTitle = "Posts"
+showAllPostsOnHomePage = true
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-RBNXTCSVRS'
+
+[[params.social]]
+name = "github"
+link = "https://github.com/xd4rker"
+
+[[params.social]]
+name = "twitter"
+link = "https://twitter.com/xd4rker"
+
+[[params.social]]
+name = "linkedin"
+link = "https://www.linkedin.com/in/ismail-belkacim/"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Projects"
+url = "/projects"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
