@@ -2,6 +2,7 @@ baseURL = 'https://blog.belkacim.com/'
 languageCode = 'en-us'
 title = 'Ismail Belkacim'
 theme = 'cactus'
+publishDir = 'docs'
 
 [params]
 colortheme = "dark"
