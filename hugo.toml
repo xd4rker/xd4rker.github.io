@@ -9,9 +9,8 @@ colortheme = "dark"
 mainSectionTitle = "Posts"
 showAllPostsOnHomePage = true
 
-[services]
-  [services.googleAnalytics]
-    id = 'G-RBNXTCSVRS'
+[params.cloudflareWebAnalytics]
+  token = "d9a76dac146c48c5a441de47f59f3e3a"
 
 [[params.social]]
 name = "github"

@@ -45,4 +45,9 @@
   {{ if .Site.Config.Services.GoogleAnalytics.ID }}
     {{ template "_internal/google_analytics.html" . }}
   {{ end }}
+
+{{ with .Site.Params.cloudflareWebAnalytics.token }}
+  {{ printf `<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "%s"}'></script>` . | safeHTML }}
+{{ end }}
+
 </head>
